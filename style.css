@@ -5,3 +5,38 @@
     --darkRed: #8C2F39;
     --red: #b23a48;
 }
+body main {
+    display:flex;
+    align-items: space-between;
+    
+}
+body main section{
+    background-color: gray;
+    border: 2px solid red;
+    height: 500px;
+    width: 30%;
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
+} 
+body main section div {
+    height: 100px;
+    text-align: center
+}
+
+body main section #disc4{
+    background-color: white;
+    width: 90%;
+}
+body main section #disc3{
+    background-color: green;
+    width: 80%;
+}
+body main section #disc2{
+    background-color: blue;
+    width: 70%;
+}
+body main section #disc1{
+    background-color: violet;
+    width: 60%;
+}
