@@ -5,3 +5,62 @@
     --darkRed: #8C2F39;
     --red: #b23a48;
 }
+
+body{
+    
+}
+
+body main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    
+}
+
+body main section{
+    background-color: gray;
+    border: 2px solid red;
+    height: 500px;
+    width: 30%;
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
+} 
+
+body main section div {
+    height: 100px;
+    text-align: center
+}
+
+body div {
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+body #holder {
+    margin: 0 auto;
+    width: 30%;
+}
+
+body #disc4{
+    background-color: white;
+    width: 90%;
+}
+
+body #disc3{
+    background-color: green;
+    width: 80%;
+}
+
+body #disc2{
+    background-color: blue;
+    width: 70%;
+}
+
+body #disc1{
+    background-color: violet;
+    width: 60%;
+}
