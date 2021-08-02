@@ -5,9 +5,15 @@
     --darkRed: #8C2F39;
     --red: #b23a48;
 }
+body{
+    
+}
 body main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
     display:flex;
-    align-items: space-between;
+    justify-content: center;
     
 }
 body main section{
@@ -24,19 +30,29 @@ body main section div {
     text-align: center
 }
 
-body main section #disc4{
+body div {
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+body #holder {
+    margin: 0 auto;
+    width: 30%;
+}
+
+body #disc4{
     background-color: white;
     width: 90%;
 }
-body main section #disc3{
+body #disc3{
     background-color: green;
     width: 80%;
 }
-body main section #disc2{
+body #disc2{
     background-color: blue;
     width: 70%;
 }
-body main section #disc1{
+body #disc1{
     background-color: violet;
     width: 60%;
 }
