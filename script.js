@@ -12,6 +12,9 @@ const win = document.querySelector('#win')
 const invalid = document.querySelector('#invalid-movement')
 const container = document.querySelectorAll(".columns")
 let victory = false
+const backgroundMusic = document.getElementById('backgroundSound')
+
+backgroundMusic.volume = 0.3
 
 const verifyMovement = (e) => {
     console.log(e.currentTarget)

@@ -71,6 +71,10 @@ body #disc1{
     width: 60%;
 }
 
+body #backgroundSound {
+    display:none
+}
+
 .hidden {
     display: none;
 }
