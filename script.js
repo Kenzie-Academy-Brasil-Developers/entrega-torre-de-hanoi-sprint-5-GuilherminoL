@@ -1,3 +1,28 @@
+const createTowers = (id) =>{
+    let container = document.querySelector('main')
+    let newElement = document.createElement('section')
+    newElement.classList.add('columns')
+    newElement.id=id
+    container.appendChild(newElement)
+
+}
+
+createTowers("column1")
+createTowers("column2")
+createTowers("column3")
+
+const createDiscs = (id) =>{
+    let container = document.querySelector('#column1')
+    let newElement = document.createElement('div')
+    newElement.id=id
+    container.appendChild(newElement)
+}
+
+createDiscs("disc4")
+createDiscs("disc3")
+createDiscs("disc2")
+createDiscs("disc1")
+
 
 const disc1 = document.querySelector('#disc1')
 const disc2 = document.querySelector('#disc2')
