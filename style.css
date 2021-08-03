@@ -14,11 +14,10 @@ body{
 
 body main {
     width: 80%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     display:flex;
     justify-content: center;
-    
 }
 
 body main section{
@@ -32,8 +31,9 @@ body main section{
 } 
 
 body main section div {
-    height: 100px;
-    text-align: center
+    height: 25%;
+    text-align: center;
+    color: white;
 }
 
 body div {
@@ -48,22 +48,22 @@ body #holder {
 }
 
 body #disc4{
-    background-color: white;
+    background-color: var(--black);
     width: 90%;
 }
 
 body #disc3{
-    background-color: green;
+    background-color: var(--darkBlue);
     width: 80%;
 }
 
 body #disc2{
-    background-color: blue;
+    background-color: var(--darkRed);
     width: 70%;
 }
 
 body #disc1{
-    background-color: violet;
+    background-color: var(--red);
     width: 60%;
 }
 
