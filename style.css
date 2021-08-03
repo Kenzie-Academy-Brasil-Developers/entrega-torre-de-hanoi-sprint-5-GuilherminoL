@@ -1,9 +1,8 @@
 :root {
-    --black: #0a0908;
-    --darkBlue: #22333B;
-    --gray: #8d8d92;
-    --darkRed: #8C2F39;
-    --red: #b23a48;
+    --pink: #BD78B0;
+    --brown: #6B4837;
+    --lightGreen: #97B154;
+    --green: #6B8C51;
 }
 
 body{
@@ -34,6 +33,11 @@ body main section{
 body main section div {
     height: 100px;
     text-align: center
+}
+
+body #moveCount{
+    height: fit-content;
+    margin: 50px;
 }
 
 body div {

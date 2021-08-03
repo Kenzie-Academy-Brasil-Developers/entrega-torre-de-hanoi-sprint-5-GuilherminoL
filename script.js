@@ -11,6 +11,7 @@ const play = document.querySelector('#play-again')
 const win = document.querySelector('#win')
 const invalid = document.querySelector('#invalid-movement')
 const container = document.querySelectorAll(".columns")
+let victory = false
 
 const verifyMovement = (e) => {
     console.log(e.currentTarget)
@@ -51,17 +52,25 @@ const verifyVictory = () => {
     if (count > 0){
         if (column1.contains(disc1) && column1.contains(disc2) && column1.contains(disc3) && column1.contains(disc4)){
             win.classList.remove('hidden')
+            victory = true
         }
         if (column2.contains(disc1) && column2.contains(disc2) && column2.contains(disc3) && column2.contains(disc4)){
             win.classList.remove('hidden')
+            victory = true
+
         }
         if (column3.contains(disc1) && column3.contains(disc2) && column3.contains(disc3) && column3.contains(disc4)){
             win.classList.remove('hidden')
+            victory = true
+
         }
     }
 }
 
 play.addEventListener("click", function() {
+    count = 0
+    moveCount = 0 
+    victory = false
     column1.appendChild(disc4)
     column1.appendChild(disc3)
     column1.appendChild(disc2)
@@ -74,17 +83,25 @@ let moveCount = 0
 const getDiscOut = element => {
     let holder = document.getElementById("holder")
     let disc = element.currentTarget.lastElementChild
-    if(holder.childElementCount === 0 || moveCount === 0){
-        holder.appendChild(disc)
-        moveCount++
+
+    if(!victory){
+
+        if(holder.childElementCount === 0 || moveCount === 0){
+            holder.appendChild(disc)
+            moveCount++
+        }
+        else if (verifyMovement(element) && !victory){
+            element.currentTarget.appendChild(holder.lastElementChild)
+            invalid.classList.add('hidden')
+            let moveCounter = document.getElementById('moveCount')
+            moveCounter.innerHTML = "Contador de movimentos : " + moveCount
+        }
+        else{
+            invalid.classList.remove('hidden')
+        }
+        
     }
-    else if (verifyMovement(element)){
-        element.currentTarget.appendChild(holder.lastElementChild)
-        invalid.classList.add('hidden')
-    }
-    else{
-        invalid.classList.remove('hidden')
-    }
+
     
 }
 
