@@ -52,22 +52,22 @@ body #holder {
 }
 
 body #disc4{
-    background-color: var(--black);
+    background-color: var(--pink);
     width: 90%;
 }
 
 body #disc3{
-    background-color: var(--darkBlue);
+    background-color: var(--brown);
     width: 80%;
 }
 
 body #disc2{
-    background-color: var(--darkRed);
+    background-color: var(--lightGreen);
     width: 70%;
 }
 
 body #disc1{
-    background-color: var(--red);
+    background-color: var(--green);
     width: 60%;
 }
 
