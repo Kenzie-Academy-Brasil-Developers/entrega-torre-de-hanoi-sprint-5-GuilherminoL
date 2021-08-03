@@ -112,8 +112,28 @@ body #disc1{
     width: 100%;
 }
 
+div#invalid-movement {
+    height: 30px;
+}
+
 body #backgroundSound {
     display:none
+
+}
+
+.messageSection{
+    margin: 20px 0;
+    display:flex;
+    flex-direction: column;
+    height: 54px;
+}
+.messageSection input {
+    height: 24px;
+    align-self: flex-end;
+    margin: 0 auto;
+}
+.invalidAnimation{
+
 }
 
 .hidden {
