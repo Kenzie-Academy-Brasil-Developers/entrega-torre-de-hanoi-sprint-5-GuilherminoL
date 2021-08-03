@@ -3,25 +3,35 @@
     --brown: #6B4837;
     --lightGreen: #97B154;
     --green: #6B8C51;
+    --towerBackground: #ABFFFF;
+    --columnsBackground: transparent;
+}
+
+html {
+    background-image: url(img/backgroundHTML.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body{
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 body main {
-    width: 80%;
+    width: 78%;
     max-width: 900px;
     margin: 0 auto;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 body main section{
-    background-color: gray;
-    border: 2px solid red;
+    background-color: var(--columnsBackground);
+    border: 2px solid var(--lightGreen);
     height: 500px;
     width: 30%;
     display: flex; 
@@ -52,23 +62,39 @@ body #holder {
 }
 
 body #disc4{
-    background-color: var(--pink);
-    width: 90%;
+    background-color: var(--towerBackground);
+    background-image: url(img/tower4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
 }
 
 body #disc3{
-    background-color: var(--brown);
-    width: 80%;
+    background-color: var(--towerBackground);
+    background-image: url(img/tower3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
 }
 
 body #disc2{
-    background-color: var(--lightGreen);
-    width: 70%;
+    background-color: var(--towerBackground);
+    background-image: url(img/tower2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
 }
 
 body #disc1{
-    background-color: var(--green);
-    width: 60%;
+    background-color: var(--towerBackground);
+    background-image: url(img/tower1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
 }
 
 body #backgroundSound {
