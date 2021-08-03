@@ -7,8 +7,10 @@ const column1 = document.querySelector('#column1')
 const column2 = document.querySelector('#column2')
 const column3 = document.querySelector('#column3')
 const holder = document.querySelector('#holder')
-
-let discNumber1 = document.querySelector('#disc1').getAttribute('data-number')
+const play = document.querySelector('#play-again')
+const win = document.querySelector('#win')
+const invalid = document.querySelector('#invalid-movement')
+const container = document.querySelectorAll(".columns")
 
 const verifyMovement = (e) => {
     console.log(e.currentTarget)
@@ -40,7 +42,6 @@ const verifyMovement = (e) => {
 }
 
 let count = 0
-let win = document.querySelector('#win')
 
 const verifyVictory = () => {
     
@@ -60,14 +61,13 @@ const verifyVictory = () => {
     }
 }
 
-let refresh = document.querySelector('#refresh')
-
-refresh.addEventListener("click", function() {
+play.addEventListener("click", function() {
     column1.appendChild(disc4)
     column1.appendChild(disc3)
     column1.appendChild(disc2)
     column1.appendChild(disc1)
     win.classList.add('hidden')
+    invalid.classList.add('hidden')
 });
 
 let moveCount = 0
@@ -80,17 +80,15 @@ const getDiscOut = element => {
     }
     else if (verifyMovement(element)){
         element.currentTarget.appendChild(holder.lastElementChild)
+        invalid.classList.add('hidden')
     }
     else{
-        win.innerHTML = 'Invalid Move!!'
+        invalid.classList.remove('hidden')
     }
     
 }
 
-let container = document.querySelectorAll("section")
-
 let containerArray = [...container].map( e => {
-    // e.addEventListener('click', verifyMovement)
     e.addEventListener("click", getDiscOut)
     e.addEventListener('click', verifyVictory)
 })
