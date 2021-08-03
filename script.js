@@ -68,8 +68,11 @@ const getDiscOut = element => {
         holder.appendChild(disc)
         moveCount++
     }
-    else {
+    else if (verifyMovement(element)){
         element.currentTarget.appendChild(holder.lastElementChild)
+    }
+    else{
+        win.innerHTML = 'Invalid Move!!'
     }
     
 }
