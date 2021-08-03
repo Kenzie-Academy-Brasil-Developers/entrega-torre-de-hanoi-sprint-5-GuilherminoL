@@ -41,8 +41,8 @@ const backgroundMusic = document.getElementById('backgroundSound')
 
 backgroundMusic.volume = 0.3
 
+
 const verifyMovement = (e) => {
-    console.log(e.currentTarget)
     if (holder.lastChild == disc2){
         if (e.currentTarget.lastElementChild == disc1){
             return false
@@ -63,7 +63,9 @@ const verifyMovement = (e) => {
         if (e.currentTarget.lastElementChild == disc2){
             return false
         }
-        if (e.currentTarget.lastElementChild == disc1)fix/AdicionandoDiscoseTorresPeloJS
+        if (e.currentTarget.lastElementChild == disc1){
+            return false
+        }
     }
     return true
 }
@@ -107,6 +109,7 @@ play.addEventListener("click", function() {
 
 let moveCount = 0
 const getDiscOut = element => {
+    backgroundMusic.play()
     let holder = document.getElementById("holder")
     let disc = element.currentTarget.lastElementChild
 
