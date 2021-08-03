@@ -64,3 +64,7 @@ body #disc1{
     background-color: violet;
     width: 60%;
 }
+
+.hidden {
+    display: none;
+}

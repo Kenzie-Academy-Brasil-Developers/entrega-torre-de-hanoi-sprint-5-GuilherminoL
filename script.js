@@ -49,16 +49,26 @@ const verifyVictory = () => {
     }
     if (count > 0){
         if (column1.contains(disc1) && column1.contains(disc2) && column1.contains(disc3) && column1.contains(disc4)){
-            win.innerHTML = 'You win!'
+            win.classList.remove('hidden')
         }
         if (column2.contains(disc1) && column2.contains(disc2) && column2.contains(disc3) && column2.contains(disc4)){
-            win.innerHTML = 'You win!'
+            win.classList.remove('hidden')
         }
         if (column3.contains(disc1) && column3.contains(disc2) && column3.contains(disc3) && column3.contains(disc4)){
-            win.innerHTML = 'You win!'
+            win.classList.remove('hidden')
         }
     }
 }
+
+let refresh = document.querySelector('#refresh')
+
+refresh.addEventListener("click", function() {
+    column1.appendChild(disc4)
+    column1.appendChild(disc3)
+    column1.appendChild(disc2)
+    column1.appendChild(disc1)
+    win.classList.add('hidden')
+});
 
 let moveCount = 0
 const getDiscOut = element => {
