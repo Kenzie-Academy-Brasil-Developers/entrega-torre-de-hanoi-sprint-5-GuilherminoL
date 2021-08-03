@@ -3,7 +3,7 @@
     --brown: #6B4837;
     --lightGreen: #97B154;
     --green: #6B8C51;
-    --towerBackground: #ABFFFF;
+    --towerBackground: rgba( 255, 255, 255, 0.50 );
     --columnsBackground: transparent;
 }
 
@@ -13,7 +13,7 @@ html {
     background-size: cover;
 }
 
-body{
+body {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
@@ -22,15 +22,18 @@ body{
 }
 
 body main {
-    width: 78%;
+    width: 80%;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
 }
 
-body main section{
+body main section {
     background-color: var(--columnsBackground);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 5.0px );
+    border-radius: 10px;
     border: 2px solid var(--lightGreen);
     height: 500px;
     width: 30%;
@@ -63,6 +66,9 @@ body #holder {
 
 body #disc4{
     background-color: var(--towerBackground);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 6.0px );
+    border-radius: 10px;
     background-image: url(img/tower4.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,6 +78,9 @@ body #disc4{
 
 body #disc3{
     background-color: var(--towerBackground);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 6.0px );
+    border-radius: 10px;
     background-image: url(img/tower3.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,6 +90,9 @@ body #disc3{
 
 body #disc2{
     background-color: var(--towerBackground);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 6.0px );
+    border-radius: 10px;
     background-image: url(img/tower2.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,6 +102,9 @@ body #disc2{
 
 body #disc1{
     background-color: var(--towerBackground);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 6.0px );
+    border-radius: 10px;
     background-image: url(img/tower1.png);
     background-size: cover;
     background-repeat: no-repeat;
