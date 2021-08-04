@@ -36,8 +36,34 @@ const invalid = document.querySelector('#invalid-movement')
 const container = document.querySelectorAll(".columns")
 let victory = false
 const backgroundMusic = document.getElementById('backgroundSound')
+const iniciar = document.querySelector('#botaoIniciar')
+const intro = document.querySelector('#intro')
+const textIntro = document.getElementById('text-intro')
 
 backgroundMusic.volume = 0.1
+
+
+
+
+let i = 0
+let txt = 'Era uma vez uma princesa muito serelepe, chamada Sebastiana. Ela vivia em paz em seu reino, até que um dia despertou a fúria do poderoso dragão Shruikan. Agora Sebastiana está em apuros! Ajude-a a fugir do dragão movendo seu castelo para outro lugar!'
+let speed = 50
+
+function typeWriter() {
+  if (i < txt.length) {
+    textIntro.innerHTML += txt.charAt(i)
+    i++
+    setTimeout(typeWriter, speed)
+  }
+}
+
+typeWriter()
+
+iniciar.addEventListener('click', function(){
+    intro.classList.add('hidden')
+})
+
+
 
 
 const verifyMovement = (e) => {
