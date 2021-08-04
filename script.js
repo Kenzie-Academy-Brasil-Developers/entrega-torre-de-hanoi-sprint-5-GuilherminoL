@@ -60,7 +60,8 @@ function typeWriter() {
 typeWriter()
 
 iniciar.addEventListener('click', function(){
-    intro.classList.add('hidden')
+    intro.classList.add('shadeOutIntro')
+    setTimeout(() => intro.classList.add('hidden'), 1500)
 })
 
 

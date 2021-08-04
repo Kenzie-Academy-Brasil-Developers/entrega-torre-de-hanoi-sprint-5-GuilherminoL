@@ -67,6 +67,11 @@ html {
     background: #584d6e
 }
 
+.shadeOutIntro{
+    animation-name: ShadeOut;
+    animation-duration: 1.5s
+}
+
 header {
     width: 70%;
     max-width: 500px;
@@ -259,7 +264,7 @@ footer{
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom:0px
     
 }
