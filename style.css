@@ -276,6 +276,10 @@ footer{
     animation-duration:0.5s
 }
 
+div#win{
+    color: #ff60ee;
+    text-shadow: 2px 2px 2px black;
+}
 
 
 .linkLogo{
@@ -327,6 +331,9 @@ footer{
         height:125px;
         width: 22.5%
 }
+    div#win{
+        font-size: 2rem;
+    }
 }
 
 @keyframes shake {
