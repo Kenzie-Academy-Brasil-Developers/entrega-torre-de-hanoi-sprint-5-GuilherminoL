@@ -199,7 +199,7 @@ body #disc1{
 }
 
 
-body #backgroundSound, #errorSound{
+body #backgroundSound, #errorSound, #victorySound{
     display:none
 
 }
@@ -326,6 +326,7 @@ footer{
     body #holder{
         height:125px;
         width: 22.5%
+}
 }
 
 @keyframes shake {

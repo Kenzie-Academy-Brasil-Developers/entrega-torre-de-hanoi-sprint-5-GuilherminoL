@@ -40,7 +40,7 @@ const iniciar = document.querySelector('#botaoIniciar')
 const intro = document.querySelector('#intro')
 const textIntro = document.getElementById('text-intro')
 
-backgroundMusic.volume = 0.1
+backgroundMusic.volume = 0.05
 
 
 
@@ -97,7 +97,9 @@ const verifyMovement = (e) => {
 let count = 0
 
 const verifyVictory = () => {
-    
+    const victorySound = document.getElementById('victorySound')
+    victorySound.volume =0.5
+
     if (column2.contains(disc4) || column3.contains(disc4)){
         count++
     }
@@ -105,15 +107,18 @@ const verifyVictory = () => {
         if (column1.contains(disc1) && column1.contains(disc2) && column1.contains(disc3) && column1.contains(disc4)){
             win.classList.remove('hidden')
             victory = true
+            victorySound.play()
         }
         if (column2.contains(disc1) && column2.contains(disc2) && column2.contains(disc3) && column2.contains(disc4)){
             win.classList.remove('hidden')
             victory = true
+            victorySound.play()
 
         }
         if (column3.contains(disc1) && column3.contains(disc2) && column3.contains(disc3) && column3.contains(disc4)){
             win.classList.remove('hidden')
             victory = true
+            victorySound.play()
 
         }
     }
