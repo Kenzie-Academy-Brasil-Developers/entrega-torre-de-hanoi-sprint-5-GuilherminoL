@@ -30,14 +30,29 @@
 }
 
 html {
+    background-color: #D5783E;
     background-image: url(img/backgroundHTML.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+}
+
+header {
+    width: 70%;
+    max-width: 500px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header h2 {
+    text-align: center;
 }
 
 body {
     font-family: 'Style Script';
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -54,11 +69,10 @@ header h1{
 
 
 body main {
-    width: 80%;
+    width: 90%;
     max-width: 900px;
-    margin: 0px auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 body main section {
@@ -68,7 +82,7 @@ body main section {
     border-radius: 10px;
     border: 2px solid var(--lightGreen);
     height: 300px;
-    width: 30%;
+    width: 33%;
     display: flex; 
     flex-direction: column-reverse; 
     align-items: center;
@@ -94,7 +108,7 @@ body div {
 
 body #holder {
     margin: 0 auto;
-    width: 24%;
+    width: 22.5%;
     height: 75px
 }
 
@@ -108,6 +122,7 @@ body #disc4{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #disc3{
@@ -120,6 +135,7 @@ body #disc3{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #disc2{
@@ -132,6 +148,7 @@ body #disc2{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #disc1{
@@ -144,6 +161,7 @@ body #disc1{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -207,12 +225,23 @@ footer p{
     animation-duration:0.5s
 }
 
-@media (min-width: 768px){
+
+    
+@media screen and (min-width:301px) and (max-width:720px){
+
+}
+
+@media screen and (min-width:721px){
+
     .messageSection input:hover {
         transition: 0.5s;
         border: 1px solid #584d6e;
         background:white;
         color: black;
-        cursor:pointer;
+        cursor:pointer;}
+
+    body main section {
+        height: 500px;
+        width: 25%;
     }
 }
