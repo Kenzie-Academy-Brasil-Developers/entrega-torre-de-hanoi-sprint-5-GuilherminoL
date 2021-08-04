@@ -8,25 +8,26 @@
 }
 
 html {
+    background-color: #D5783E;
     background-image: url(img/backgroundHTML.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 body {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 body main {
-    width: 80%;
+    width: 90%;
     max-width: 900px;
-    margin: 0px auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 body main section {
@@ -35,8 +36,8 @@ body main section {
     backdrop-filter: blur( 5.0px );
     border-radius: 10px;
     border: 2px solid var(--lightGreen);
-    height: 500px;
-    width: 30%;
+    height: 300px;
+    width: 33%;
     display: flex; 
     flex-direction: column-reverse; 
     align-items: center;
@@ -74,6 +75,7 @@ body #disc4{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #disc3{
@@ -86,6 +88,7 @@ body #disc3{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #disc2{
@@ -98,6 +101,7 @@ body #disc2{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #disc1{
@@ -110,6 +114,7 @@ body #disc1{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 body #backgroundSound {
@@ -118,4 +123,15 @@ body #backgroundSound {
 
 .hidden {
     display: none;
+}
+
+@media screen and (min-width:301px) and (max-width:720px){
+
+}
+
+@media screen and (min-width:721px){
+    body main section {
+        height: 500px;
+        width: 25%;
+    }
 }
