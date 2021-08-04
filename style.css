@@ -34,7 +34,9 @@ html {
     background-image: url(img/backgroundHTML.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
+    font-size: 16px;
 }
 
 header {
@@ -109,7 +111,10 @@ body div {
 body #holder {
     margin: 0 auto;
     width: 22.5%;
-    height: 75px
+    height: 125px
+}
+body #holder div{
+    height:100%
 }
 
 body #disc4{
@@ -175,8 +180,8 @@ body #moveCount{
 }
 
 .messageSection{
-    margin: 20px 0;
-    height: 76px;
+    margin: 10px 0;
+    height: 86px;
     display:flex;
     flex-direction: column;
     font-weight: 900;
@@ -184,10 +189,10 @@ body #moveCount{
     justify-content: flex-end;
 }
 .messageSection input {
-    height: 46px;
+    height: fit-content;
     color:white;
     align-self: flex-end;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
     padding : 5px 10px;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -198,10 +203,11 @@ body #moveCount{
 }
 
 .messageSection div {
-    height: 30px;
+    height: fit-content;
     margin: 5px auto;
     color: #FF4438;
     text-shadow: 1px 1px 1px black;
+    font-size: 1.5rem;
 }
 .invalidAnimation{
     animation-name: shake;
