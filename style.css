@@ -13,6 +13,18 @@ html {
     background-size: cover;
 }
 
+header {
+    width: 500px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header h2 {
+    text-align: center;
+}
+
 body {
     max-width: 800px;
     margin: 0 auto;
