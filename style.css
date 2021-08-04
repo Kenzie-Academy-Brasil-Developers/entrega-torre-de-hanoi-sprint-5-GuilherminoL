@@ -181,7 +181,7 @@ body #disc1{
 }
 
 
-body #backgroundSound, #errorSound{
+body #backgroundSound, #errorSound, #victorySound{
     display:none
 
 }
