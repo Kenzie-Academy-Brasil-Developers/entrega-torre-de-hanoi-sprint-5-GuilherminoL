@@ -105,8 +105,8 @@ play.addEventListener("click", function() {
     column1.appendChild(disc1)
     win.classList.add('hidden')
     invalid.classList.add('hidden')
-    let moveCounter = document.getElementById('moveCount')
-    moveCounter.innerHTML = "Contador de movimentos : " + moveCount
+    let moveCounter = document.getElementById('moveCountSpan')
+    moveCounter.innerHTML =  moveCount
 });
 
 let moveCount = 0
