@@ -20,6 +20,16 @@
     }
 }
 
+@keyframes bluePulse {
+    0.0%{
+    }
+    100%{
+    }
+    49.9%{
+        color: #0b66c2;
+    }
+}
+
 :root {
     --pink: #BD78B0;
     --brown: #6B4837;
@@ -53,10 +63,12 @@ header h2 {
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Style Script';
     max-width: 900px;
     margin: 0 auto;
     display: flex;
+    min-height: calc(100% + 500px);
     flex-direction: column;
     align-items: center;
 }
@@ -108,8 +120,9 @@ body div {
 
 body #holder {
     margin: 0 auto;
-    width: 22.5%;
-    height: 125px
+    width: 29.7%;
+    height: 75px
+    
 }
 body #holder div{
     height:100%
@@ -122,7 +135,7 @@ body #disc4{
     border-radius: 10px;
     background-image: url(img/tower4.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;overflow-x: hidden;
     background-position: center;
     width: 100%;
     box-sizing: border-box;
@@ -142,7 +155,7 @@ body #disc3{
 }
 
 body #disc2{
-    background-color: var(56px--towerBackground);
+    background-color: var(--towerBackground);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 6.0px );
     border-radius: 10px;
@@ -216,8 +229,24 @@ body #moveCount{
     display: none;
 }
 
-footer p{
-    margin:10px
+footer{
+    width: 100vw;
+    background-color: transparent;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 5.0px );
+    display: flex;
+    text-align: center;
+    padding:10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom:0px
+    
+}
+.blueAnimation{
+    margin-left: 4px;
 }
 .shadeOutAnimation{
     animation-name: ShadeOut;
@@ -230,7 +259,13 @@ footer p{
 }
 
 
-    
+
+.linkLogo{
+    animation: bluePulse 3s ease 0s infinite normal none;
+    width:23px;
+    margin:1px 0 0 0;
+}
+
 @media screen and (min-width:301px) and (max-width:720px){
 
 }
@@ -247,5 +282,9 @@ footer p{
     body main section {
         height: 500px;
         width: 25%;
+    }
+    body #holder{
+        height:125px;
+        width: 22.5%
     }
 }
