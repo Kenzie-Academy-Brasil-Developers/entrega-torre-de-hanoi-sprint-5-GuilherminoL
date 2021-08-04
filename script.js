@@ -105,6 +105,8 @@ play.addEventListener("click", function() {
     column1.appendChild(disc1)
     win.classList.add('hidden')
     invalid.classList.add('hidden')
+    let moveCounter = document.getElementById('moveCount')
+    moveCounter.innerHTML = "Contador de movimentos : " + moveCount
 });
 
 let moveCount = 0
@@ -127,6 +129,9 @@ const getDiscOut = element => {
         }
         else{
             invalid.classList.remove('hidden')
+            invalid.classList.add('invalidAnimation')
+            setTimeout(() =>invalid.classList.remove('invalidAnimation'), 750)
+            
         }
         
     }
