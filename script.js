@@ -7,10 +7,6 @@ const createTowers = (id) =>{
 
 }
 
-createTowers("column1")
-createTowers("column2")
-createTowers("column3")
-
 const createDiscs = (id) =>{
     let container = document.querySelector('#column1')
     let newElement = document.createElement('div')
@@ -18,11 +14,13 @@ const createDiscs = (id) =>{
     container.appendChild(newElement)
 }
 
+createTowers("column1")
+createTowers("column2")
+createTowers("column3")
 createDiscs("disc4")
 createDiscs("disc3")
 createDiscs("disc2")
 createDiscs("disc1")
-
 
 const disc1 = document.querySelector('#disc1')
 const disc2 = document.querySelector('#disc2')
@@ -39,7 +37,7 @@ const container = document.querySelectorAll(".columns")
 let victory = false
 const backgroundMusic = document.getElementById('backgroundSound')
 
-backgroundMusic.volume = 0.3
+backgroundMusic.volume = 0.1
 
 
 const verifyMovement = (e) => {
@@ -150,6 +148,10 @@ const getDiscOut = element => {
             
         }
         else{
+            let errorSound = document.getElementById('errorSound')
+            errorSound.volume = 0.5
+            errorSound.play()
+            
             invalid.classList.remove('hidden')
             invalid.classList.add('invalidAnimation')
             setTimeout(() =>invalid.classList.remove('invalidAnimation'), 750)
