@@ -95,6 +95,21 @@ const verifyVictory = () => {
     }
 }
 
+const shadeOut = element =>{
+    element.classList.add("shadeOutAnimation")
+    setTimeout(() => {
+        element.classList.remove("shadeOutAnimation")
+    }, 500);
+    
+}
+
+const shadeIn = element =>{
+    element.classList.add("shadeInAnimation")
+    setTimeout(() => {
+        element.classList.remove("shadeInAnimation")
+    }, 500);
+}
+
 play.addEventListener("click", function() {
     count = 0
     moveCount = 0 
@@ -124,8 +139,15 @@ const getDiscOut = element => {
         else if (verifyMovement(element) && !victory){
             element.currentTarget.appendChild(holder.lastElementChild)
             invalid.classList.add('hidden')
-            let moveCounter = document.getElementById('moveCount')
-            moveCounter.innerHTML = "Contador de movimentos : " + moveCount
+            let moveCounter = document.getElementById('moveCountSpan')
+            shadeOut(moveCounter)
+            setTimeout(() => {
+                moveCounter.innerText =  moveCount
+                shadeIn(moveCounter)
+            }, 500);
+            
+            
+            
         }
         else{
             invalid.classList.remove('hidden')
