@@ -78,6 +78,8 @@ header {
 }
 
 header h1 {
+    font-size: 2rem;
+    margin:15px;
     text-align: center;
 }
 
@@ -94,12 +96,6 @@ body {
     min-height: calc(100% + 500px);
     flex-direction: column;
     align-items: center;
-}
-
-header h1{
-    font-size: 56px;
-    margin:15px;
-    text-align: center;
 }
 
 
@@ -129,10 +125,11 @@ body main section div {
     color: white;
 }
 
-body #moveCount{
+#moveCount{
     height: fit-content;
     margin: 5px;
     text-shadow: 2px 2px 2px white;
+    font-size: 1rem;
 }
 
 body div {
@@ -209,10 +206,6 @@ body #backgroundSound, #errorSound, #victorySound{
 
 }
 
-body #moveCount{
-    font-size: 20px
-}
-
 .messageSection{
     margin: 10px 0;
     height: 86px;
@@ -261,12 +254,12 @@ footer{
     text-align: center;
     padding:10px;
     font-family: 'Noto Sans JP', sans-serif;
-    margin-top: 50px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom:0px
-    
+    bottom: 0px;
+    box-sizing: border-box;    
 }
 .blueAnimation{
     margin-left: 4px;
@@ -299,7 +292,15 @@ a{
     text-decoration:none;
 }
 
-@media screen and (min-width:301px) and (max-width:720px){
+@media screen and (width:320px){
+    /* iphone 5/SE */
+
+    body main section {
+        height: 230px;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:720px){
     #text-intro {
         font-size: 2rem;
         line-height: 24px;
@@ -334,16 +335,29 @@ a{
         cursor:pointer;
     }
 
+    header h1 {
+        font-size: 4rem;
+    }
+
     body main section {
         height: 500px;
         width: 25%;
     }
+
+    #moveCount{
+        font-size: 2rem;
+    }
+
     body #holder{
         height:125px;
         width: 22.5%
 }
     div#win{
         font-size: 2rem;
+    }
+    
+    footer {
+        margin-top: 50px;
     }
 }
 
