@@ -139,6 +139,11 @@ body div {
 }
 
 body #holder {
+    background-color: var(--columnsBackground);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 5.0px );
+    border-radius: 10px;
+    border: 2px solid var(--lightGreen);
     margin: 0 auto;
     width: 29.7%;
     height: 75px
